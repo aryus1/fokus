@@ -84,15 +84,16 @@ const contagemRegressiva = () => {
 startPauseBt.addEventListener('click', iniciar)
 
 function iniciar() {
-    musicaPlay.play()
     if(intervaloId){
         musicaPause.play()
         zerar()
         return
     }
+    musicaPlay.play()
     intervaloId = setInterval(contagemRegressiva, 1000)
     iniciarOuPausarBt.textContent = "Pausar"
     imagemPausar.setAttribute('src', `/imagens/pause.png`)
+
 }
 
 function zerar() {
